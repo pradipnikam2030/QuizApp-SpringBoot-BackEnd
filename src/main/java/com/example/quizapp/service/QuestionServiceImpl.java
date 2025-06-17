@@ -46,7 +46,7 @@ public class QuestionServiceImpl implements QuestionService {
         }
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
     }
-
+ 
     @Override
     public ResponseEntity<String> addQuestion(Question question) {
         try{

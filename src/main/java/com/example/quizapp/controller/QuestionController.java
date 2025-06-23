@@ -31,17 +31,17 @@ public class QuestionController {
         return questionService.addQuestion(question);
     }
 
-    @GetMapping("category{category}")
+    @GetMapping("/category/{category}")
     public ResponseEntity<List<Question>> findByCategory(@PathVariable String category){
         return questionService.findByCategory(category);
     }
 
-    @PutMapping("/update{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Question> updateQuestion(@PathVariable int id, @RequestBody Question question){
          return questionService.updateQuestionById(id, question);
     }
 
-    @DeleteMapping("/delete{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteQuestionById(@PathVariable int id){
         return questionService.deleteQuestionById(id);
     }

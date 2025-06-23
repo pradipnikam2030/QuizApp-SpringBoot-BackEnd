@@ -88,6 +88,7 @@ public class QuestionServiceImpl implements QuestionService {
                   if(Objects.nonNull(question.getCategory()) && !"".equalsIgnoreCase(question.getCategory())){
                       originalQuestion.setCategory(question.getCategory());
                   }
+                  questionRepo.save(originalQuestion);
                   return new ResponseEntity<>(originalQuestion, HttpStatus.ACCEPTED);
               }
 

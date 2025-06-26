@@ -23,7 +23,7 @@ public class QuizController {
 
     }
 
-    @GetMapping("/getQuiz")
+    @GetMapping("/getQuiz/{id}")
     public ResponseEntity<List<QuizDto>> getQuiz(@PathVariable int id){
         return quizService.getQuizQuestions(id);
     }
